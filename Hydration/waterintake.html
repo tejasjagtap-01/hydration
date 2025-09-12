@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Water Intake Tracker</title>
+    <link rel="stylesheet" href="waterintake.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Water Intake Calculator</h1>
+        <div class="goal-input">
+            <input type="number" id="goalInput" placeholder="enter goal in ml">
+            <button id="setGoalBtn">Set Goal</button>
+        </div>
+
+        <div class="circle">
+            <svg>
+                <circle cx="80" cy="80" r="70"></circle>
+                <circle id="progressCircle" cx="80" cy="80" r="70"></circle>
+            </svg>
+            <div class="percentage" id="percentage">0%</div>
+        </div>
+
+        <p id="goalText">Goal: 0ml</p>
+        <p id="intakeText">Total Intake: 0ml</p>
+
+        <div class="buttons">
+             <button onclick="addWater(100)">+100ml</button>
+            <button onclick="addWater(250)">+250ml</button>
+             <button onclick="addWater(500)">+500ml</button>
+              <button onclick="addWater(1000)">+1000ml</button>
+              <button onclick="addWater(parseInt(prompt('Enter Custom amount:')) || 0)">+Custom</button>
+        </div> 
+
+        <h2>Logs</h2>
+        <ul id="logs"></ul>
+    </div>
+
+    <script src="waterintake.js"></script>
+</body>
+</html>
